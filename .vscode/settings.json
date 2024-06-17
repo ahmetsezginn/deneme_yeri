@@ -1,0 +1,42 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "MySql Host",
+            "database": "/Users/ahmetsezgin/Downloads/nycflights13.sqlite"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "/Users/ahmetsezgin/Desktop/code:lesson/okul/lab:veritabanı/veritabanı_lab/empty.sqlite",
+            "name": "empty"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "/Users/ahmetsezgin/Desktop/code:lesson/okul/lab:veritabanı/veritabanı_lab/nycflights13.sqlite",
+            "name": "nhigt"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "username": "root",
+            "database": "veritabani_adi",
+            "name": "mydatabase",
+            "password": ""
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:presiption_deneme_yeri}/mydatabase.db",
+            "name": "mydata"
+        }
+    ]
+}
