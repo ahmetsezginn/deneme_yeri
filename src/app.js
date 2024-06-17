@@ -2,8 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -16,12 +15,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Routes
-app.use('/users', userRoutes);
-app.use('/products', productRoutes);
+app.use('/auth', authRoutes);
 
-// View Engine
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// Login Page Route
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public', 'login.html'));
+});
 
 // Default Route to Serve index.html
 app.get('*', (req, res) => {
