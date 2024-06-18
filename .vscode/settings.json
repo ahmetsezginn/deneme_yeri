@@ -36,7 +36,7 @@
             "previewLimit": 50,
             "driver": "SQLite",
             "database": "${workspaceFolder:presiption_deneme_yeri}/mydatabase.db",
-            "name": "mydata"
+            "name": "prreesiption_data"
         }
     ]
 }

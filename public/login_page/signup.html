@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edukin Sign Up</title>
-    <link rel="stylesheet" href="login_page/css/styles.css">
+    <link rel="stylesheet" href="/login_page/css/styles.css">
 </head>
 <body>
     <div class="login-container">
-        <img src="login_page/images/logo.svg" alt="Edukin Logo" class="logo">
+        <img src="/login_page/images/logo.svg" alt="Edukin Logo" class="logo">
         <h1>Edukin</h1>
-        <form action="/signup" method="POST">
+        <form action="/auth/signup" method="POST">
             <div class="input-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -26,6 +26,9 @@
             <button type="submit">Sign Up</button>
         </form>
         <p class="signup-link">Already have an account? <a href="/login">Login</a></p>
+        <% if (typeof errorMessage !== 'undefined') { %>
+            <p class="error-message"><%= errorMessage %></p>
+        <% } %>
     </div>
 </body>
 </html>

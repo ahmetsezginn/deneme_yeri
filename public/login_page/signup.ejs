@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukin Sign Up</title>
+    <link rel="stylesheet" href="/login_page/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="/login_page/images/logo.svg" alt="Edukin Logo" class="logo">
+        <h1>Edukin</h1>
+        <form action="/auth/signup" method="POST">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class="signup-link">Already have an account? <a href="/login">Login</a></p>
+        <% if (errorMessage) { %>
+            <p class="error-message"><%= errorMessage %></p>
+        <% } %>
+    </div>
+</body>
+</html>
