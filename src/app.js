@@ -19,7 +19,12 @@ app.use('/auth', authRoutes);
 
 // Login Page Route
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public', 'login.html'));
+  res.sendFile(path.join(__dirname, '../public/login_page/login.html'));
+});
+
+// Signup Page Route
+app.get('/signup', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/login_page/signup.html'));
 });
 
 // Default Route to Serve index.html
